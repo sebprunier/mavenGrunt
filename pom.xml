@@ -8,11 +8,20 @@
 	<name>mavenGrunt</name>
 	<description>Maven+grunt integration</description>
 
+	<properties>
+		<jersey.version>1.17.1</jersey.version>
+	</properties>
+
 	<dependencies>
 		<dependency>
-			<groupId>com.sparkjava</groupId>
-			<artifactId>spark-core</artifactId>
-			<version>0.9.9.7-SNAPSHOT</version>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-server</artifactId>
+			<version>${jersey.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.jersey</groupId>
+			<artifactId>jersey-servlet</artifactId>
+			<version>${jersey.version}</version>
 		</dependency>
 
 		<dependency>
@@ -20,20 +29,12 @@
 			<artifactId>mongo-java-driver</artifactId>
 			<version>2.10.1</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
-	<repositories>
-		<repository>
-			<id>Spark repository</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-		</repository>
-	</repositories>
 </project>

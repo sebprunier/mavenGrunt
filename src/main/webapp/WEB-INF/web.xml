@@ -1,15 +1,18 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee" version="2.5">
-	<filter>
-		<filter-name>SparkFilter</filter-name>
-		<filter-class>spark.servlet.SparkFilter</filter-class>
+	<servlet>
+		<servlet-name>jersey-serlvet</servlet-name>
+		<servlet-class>
+			com.sun.jersey.spi.container.servlet.ServletContainer
+		</servlet-class>
 		<init-param>
-			<param-name>applicationClass</param-name>
-			<param-value>com.github.xseignard.mavenGrunt.server.Server</param-value>
+			<param-name>com.sun.jersey.config.property.packages</param-name>
+			<param-value>com.github.xseignard.mavenGrunt.server</param-value>
 		</init-param>
-	</filter>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
 
-	<filter-mapping>
-		<filter-name>SparkFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	<servlet-mapping>
+		<servlet-name>jersey-serlvet</servlet-name>
+		<url-pattern>/resources/*</url-pattern>
+	</servlet-mapping>
 </web-app>

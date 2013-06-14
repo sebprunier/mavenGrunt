@@ -13,8 +13,8 @@ import com.mongodb.util.JSON;
 
 public class GeeksRepo {
 
-	MongoClient mongoClient;
-	DB geeksDatabase;
+	private MongoClient mongoClient;
+	private DB geeksDatabase;
 
 	public GeeksRepo() {
 		try {
@@ -22,7 +22,7 @@ public class GeeksRepo {
 					"mongodb://localhost"));
 			geeksDatabase = mongoClient.getDB("geeksDB");
 		} catch (UnknownHostException e) {
-			System.out.println("start your DB dumbass");
+			System.err.println("start your DB dumbass");
 		}
 	}
 
@@ -33,12 +33,16 @@ public class GeeksRepo {
 		if (skip == null) {
 			skip = 0;
 		}
+
+		BasicDBObject basicDBObject = new BasicDBObject();
+		if (query != null && !"".equals(query)) {
+			basicDBObject.put("likes", query);
+		}
+
 		DBCursor result = geeksDatabase.getCollection("geeks")
-				.find(new BasicDBObject("likes", query))
-				.limit(limit)
-				.skip(skip);
-		List<DBObject> gees = result.toArray();
-		return JSON.serialize(gees);
+				.find(basicDBObject).limit(limit).skip(skip);
+		List<DBObject> geeks = result.toArray();
+		return JSON.serialize(geeks);
 	}
 
 }
