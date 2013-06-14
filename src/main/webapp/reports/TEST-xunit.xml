@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="Chrome 29.0 (Linux)" package="undefined" timestamp="2013-06-14T12:26:15" id="0" hostname="patate" tests="6" errors="0" failures="0" time="0.007">
+    <properties>
+      <property name="browser.fullName" value="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1530.2 Safari/537.36"/>
+    </properties>
+    <testcase name="controller should be registered" time="0" classname="Chrome 29.0 (Linux).bzh_geektic_appCtrl"/>
+    <testcase name="should create the scope with some geeks" time="0.003" classname="Chrome 29.0 (Linux).bzh_geektic_appCtrl"/>
+    <testcase name="should create the scope with some geeks" time="0.002" classname="Chrome 29.0 (Linux).bzh_geektic_appCtrl"/>
+    <testcase name="should return the right url from gravatar function" time="0.002" classname="Chrome 29.0 (Linux).bzh_geektic_appCtrl"/>
+    <testcase name="should be registered" time="0" classname="Chrome 29.0 (Linux).bzh_geektic"/>
+    <testcase name="should have appCtrl, details and animations deps" time="0" classname="Chrome 29.0 (Linux).bzh_geektic"/>
+    <system-out><![CDATA[
+]]></system-out>
+    <system-err/>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html ng-app="bzh.geektic" ng-controller="AppCtrl">
+<head>
+  <title>Geektic</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/app.css" />
+  
+</head>
+<body app-scroll>
+  <main id="wrapper">
+    <header>
+      <div class="website-header">
+        <div class="row">
+          <a href="#">
+            <h1>Geektic</h1>
+          </a>
+          <nav>
+            <div class="btn info medium">
+              <a href="https://github.com/xseignard/breizhcamp-js" target="_blank">
+                <i class="icon-github icon-left"></i>
+                View Github Repo
+              </a>
+            </div>
+            <div class="btn info medium red">
+              <a href="http://xseignard.github.io/breizhcamp-js/prez/" target="_blank">
+                <i class="icon-picture icon-left"></i>
+                View Slides
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="navbar nav1 website-nav">
+        <nav class="row">
+          <form class="search-website-form field">
+            <input type="search" id="search" placeholder="Search for geeks..." class="input" ng-model="q" />
+          </form>
+        </nav>
+      </div>
+    </header>
+    <div id="content">
+      <div ng-view id="view"></div>
+    </div>
+  </main>
+  <footer class="navbar nav1">
+    <div class="row">
+      <div class="inner">
+        <div class="title">
+          <a href="#">
+            <h4>Geektic</h4>
+          </a>
+        </div>
+          <nav>
+            <div class="btn info medium">
+              <a href="https://github.com/xseignard/breizhcamp-js" target="_blank">
+                <i class="icon-github icon-left"></i>
+                View Github Repo
+              </a>
+            </div>
+            <div class="btn info medium red">
+              <a href="http://xseignard.github.io/breizhcamp-js/prez/" target="_blank">
+                <i class="icon-picture icon-left"></i>
+                View Slides
+              </a>
+            </div>
+          </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="./assets/vendor/jquery.js">\x3C/script>')</script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular.min.js"></script>
+  <script>window.angular || document.write('<script src="./assets/vendor/angular.js">\x3C/script>')</script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-resource.min.js"></script>
+  <script>window.angular.module('ngResource') || document.write('<script src="./assets/vendor/angular-resource.js">\x3C/script>')</script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.9.7/TweenMax.min.js"></script>
+  <script>window.TweenMax || document.write('<script src="./assets/vendor/tweenMax.js">\x3C/script>')</script>
+
+  <script src="./assets/vendor/ScrollToPlugin.js"></script>
+  <script src="./assets/vendor/JavaScript-MD5.js"></script>
+
+  
+  
+    <script src="./assets/breizhcamp-js_frontend.min.js"></script>
+  
+  
+
+
+</body>
+</html>
